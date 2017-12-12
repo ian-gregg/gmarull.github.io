@@ -95,8 +95,8 @@ $$\mathit{S}$$ is given by:
 $$
 \begin{align}
 \mathit{S} :~ & ax^2 + by^2 + cz^2 + \\
-              & 2fyz + 2gxz + 2hxy + \\
-	      & px + qy + rz + d = 0.
+              & 2fxy + 2gxz + 2hyz + \\
+	      & 2px + 2qy + 2rz + d = 0.
 \end{align}
 \label{eq_quad_gen}
 \tag{2}
@@ -106,7 +106,7 @@ Eq. $$\eqref{eq_quad_gen}$$ can be written in a semi-matricial form, which will
 be particularly useful for our problem:
 
 $$
-\mathit{S}: \mathbf{x}^T \mathbf{M} \mathbf{x} + \mathbf{x}^T \mathbf{n} + d = 0
+\mathit{S}: \mathbf{x}^T \mathbf{M} \mathbf{x} + 2\mathbf{x}^T \mathbf{n} + d = 0
 \label{eq_quad_semat}
 \tag{3}
 $$
@@ -116,8 +116,10 @@ where $$\mathbf{x}$$ is:
 $$
 \mathbf{x} =
 \begin{bmatrix}
-x & y & z
-\end{bmatrix}^T
+    x \\
+    y \\
+    z
+\end{bmatrix}
 $$
 
 and $$\mathbf{M}$$, $$\mathbf{n}$$ are, respectively:
@@ -125,9 +127,9 @@ and $$\mathbf{M}$$, $$\mathbf{n}$$ are, respectively:
 $$
 \mathbf{M} =
 \begin{bmatrix}
-    a & h & g \\
-    h & b & f \\
-    g & f & c
+    a & f & g \\
+    f & b & h \\
+    g & h & c
 \end{bmatrix},
 ~~
 \mathbf{n} =
@@ -407,7 +409,7 @@ $$
 Eq. $$\eqref{eq_cal_quad_ns}$$ can be re-written in the familiar quadric form:
 
 $$
-\mathbf{h}_m^T \mathbf{M} \mathbf{h}_m + \mathbf{h}_m^T \mathbf{n} + d = 0
+\mathbf{h}_m^T \mathbf{M} \mathbf{h}_m + 2 \mathbf{h}_m^T \mathbf{n} + d = 0
 \label{eq_cal_quad}
 \tag{14}
 $$
@@ -421,7 +423,7 @@ $$
 $$
 
 $$
-\mathbf{n} = -2 \mathbf{A}^{-T} \mathbf{A}^{-1} \mathbf{b}
+\mathbf{n} = -1 \mathbf{A}^{-T} \mathbf{A}^{-1} \mathbf{b} = -1 \mathbf{M} \mathbf{b}
 \label{eq_cal_n}
 \tag{15b}
 $$
